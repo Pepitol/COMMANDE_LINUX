@@ -1,0 +1,55 @@
+En attendant, je te montre la méthode
+1️⃣ Combien de pointeurs dans un bloc indirect
+
+Formule :
+
+nombre de pointeurs = taille_bloc / taille_pointeur
+
+Exemple si pointeur = 4 octets :
+
+256 / 4 = 64 pointeurs
+
+Donc un bloc indirect peut pointer vers 64 blocs de données.
+
+2️⃣ Pointeurs directs
+12 blocs
+3️⃣ Indirect simple
+64 blocs
+4️⃣ Double indirect
+
+Chaque entrée pointe vers un bloc indirect :
+
+64 × 64 = 4096 blocs
+5️⃣ Triple indirect
+64 × 64 × 64 = 262144 blocs
+6️⃣ Nombre total de blocs
+12
++ 64
++ 4096
++ 262144
+= 266316 blocs
+7️⃣ Taille maximale du fichier
+
+Bloc = 256 octets
+
+266316 × 256
+= 68 176 896 octets
+
+≈ 65 MB
+
+(si le pointeur fait 4 octets)
+
+✅ Méthode à retenir pour les exams
+
+1️⃣ calculer pointeurs par bloc
+
+bloc / taille_pointeur
+
+2️⃣ calculer
+
+direct
++ indirect
++ indirect²
++ indirect³
+
+3️⃣ multiplier par taille du bloc
